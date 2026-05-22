@@ -3,7 +3,7 @@ const cors = require('cors');
 const client = require('prom-client');
 
 const app = express();
-const port = 3000;
+const port = 8080;
 
 const collectDefaultMetrics = client.collectDefaultMetrics;
 
@@ -30,5 +30,5 @@ app.get('/metrics', async (req,res) => {
 })
 
 app.listen(port, () => {
-    console.log("app is listening on port:3000");
+    console.log("app is listening on port:8080");
 })
